@@ -1,11 +1,11 @@
 
 <template>
   <h1>{{ title }}</h1>
-  <Modal />
+  <Modal :header="header" :text="text" theme="sale"/>
 </template>
 
 <script>
-import Modal from './components/Modals.vue'
+import Modal from './components/Modal.vue'
 
 export default {
   name: 'App',
@@ -14,7 +14,9 @@ export default {
   },
   data() {
     return {
-      title: 'my first vue app :)'
+      title: 'my first vue app 🥳',
+      header: 'sign up for the giveaway',
+      text: 'grab your swag for half price'
     }
   },
   methods: {
