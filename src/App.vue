@@ -4,7 +4,7 @@
   <p>welcome..</p>
 
   <!-- modal #1 -->
-  <div v-if="showModal">
+  <teleport to=".modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
       <template v-slot:links>
         <a href="#">sign up</a>
@@ -14,10 +14,10 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sunt modi sit nulla id illum placeat quo
         assumenda consequatur nostrum deleniti ab eligendi natus culpa aperiam eum, laboriosam corporis officia!</p>
     </Modal>
-  </div>
+  </teleport>
 
   <!-- modal #2 -->
-  <div v-if="showModalTwo">
+  <teleport to=".modals" v-if="showModalTwo">
     <Modal @close="toggleModalTwo">
       <template v-slot:links>
         <a href="#">sign up</a>
@@ -27,7 +27,7 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sunt modi sit nulla id illum placeat quo
         assumenda consequatur nostrum deleniti ab eligendi natus culpa aperiam eum, laboriosam corporis officia!</p>
     </Modal>
-  </div>
+  </teleport>
 
   <button @click="toggleModal">open modal #1</button><br />
   <button @click="toggleModalTwo">open modal #2</button><br />
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style scoped>
-#app {
+#app, #modals {
   font-family: Avenir, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
