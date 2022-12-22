@@ -20,7 +20,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .backdrop {
         top: 0;
         position: fixed;
